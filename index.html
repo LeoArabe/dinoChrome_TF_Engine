@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dino AI App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #training-section, #testing-section {
+      margin-bottom: 30px;
+    }
+    #gameCanvas {
+      border: 1px solid #333;
+      display: block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dino AI App</h1>
+  <section id="training-section">
+    <h2>Treinamento</h2>
+    <!-- Valor padrão reduzido para 100 para testes -->
+    <label>População: <input type="number" id="populationSize" value="100"></label>
+    <label>Elite (%): <input type="number" id="elitePercent" value="5"></label>
+    <button id="start-training">Iniciar Treinamento</button>
+    <button id="stop-training" disabled>Parar Treinamento</button>
+    <div id="training-status"></div>
+  </section>
+  <section id="testing-section">
+    <h2>Teste</h2>
+    <button id="start-testing">Iniciar Teste</button>
+    <button id="stop-testing" disabled>Parar Teste</button>
+    <canvas id="gameCanvas" width="800" height="200"></canvas>
+    <div id="testing-status"></div>
+  </section>
+  <script src="renderer.js"></script>
+</body>
+</html>
